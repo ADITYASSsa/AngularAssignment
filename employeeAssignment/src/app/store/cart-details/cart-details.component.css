@@ -1,0 +1,60 @@
+/* Add your background image URL */
+.container-fluid {
+  background-color: #115f23;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px;
+}
+
+/* Style the navbar */
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Style the table */
+.table {
+  color: #333; /* Text color for table */
+}
+
+/* Style the "Checkout" button with margin and padding */
+.btn-secondary {
+  background-color: #333;
+  color: white;
+  margin: 10px; /* Add margin around the button */
+  padding: 10px 20px; /* Add padding inside the button */
+}
+
+/* Style the "Apply Coupon" and "Remove Coupon" buttons with margin and padding */
+.bg-dark.text-white {
+  background-color: #333;
+  color: white;
+  margin: 5px; /* Add margin around the button */
+  padding: 5px 10px; /* Add padding inside the button */
+}
+
+/* Add custom styles for the "Apply Coupon" button icon */
+.bg-dark.text-white .fa {
+  margin-right: 5px; /* Add space between icon and text */
+}
+
+/* Style the discount message */
+.text-success {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Style the Remove Coupon button when disabled */
+.bg-dark.text-white[disabled] {
+  background-color: #777;
+  cursor: not-allowed;
+  margin: 5px; /* Add margin around the button */
+  padding: 5px 10px; /* Add padding inside the button */
+}
+
+/* Style the discount row in the table */
+.discount-row {
+  background-color: #115f23; /* Green background for discount row */
+  color: white;
+}

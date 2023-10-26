@@ -1,0 +1,30 @@
+.container-fluid {
+  background-color: #115f23; /* Background color for the container */
+  color: white; /* Text color for the content */
+  padding: 20px; /* Add some padding for better spacing */
+}
+
+/* Style the heading */
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Style the paragraphs */
+p {
+  font-size: 18px;
+  margin-bottom: 10px; /* Add some margin to separate paragraphs */
+}
+
+/* Style the "Return to Store" button */
+.btn-primary {
+  background-color: #f1ea32; /* Blue button background */
+  color: rgb(0, 0, 0); /* White text color */
+  padding: 10px 20px; /* Add padding to the button */
+  margin-top: 20px; /* Add margin at the top of the button */
+}
+
+/* Hover effect for the button */
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

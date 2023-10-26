@@ -1,0 +1,65 @@
+/* Add your background image URL */
+.container-fluid {
+  background-image: url('../../../wp2940597 (1).jpg');
+  background-size: cover;
+  background-position: center;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  width: 70%;
+  align-content: center;
+  margin-top:100px;
+}
+
+/* Style the navbar */
+.navbar-brand {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Style the "Thanks" message */
+.text-center h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.text-center p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Style the "Return to Store" button */
+.btn-primary {
+  background-color: #115f23; /* Blue button background */
+  color: white; /* White text color */
+  padding: 10px 20px; /* Add padding to the button */
+  margin-top: 20px; /* Add margin at the top of the button */
+}
+
+/* Style the form */
+.form-control {
+  border: 1px solid #115f23;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Style the error message */
+.text-danger {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+/* Style the "Back" and "Complete Order" buttons */
+.btn-secondary {
+  background-color: #115f23; /* Dark button background */
+  color: white; /* White text color */
+  padding: 10px 20px; /* Add padding to the button */
+  margin: 10px; /* Add margin around the buttons */
+}
+
+/* Hover effect for the buttons */
+.btn-secondary:hover,
+.btn-primary:hover {
+  background-color: rgb(30, 90, 15); /* Darker background on hover */
+}

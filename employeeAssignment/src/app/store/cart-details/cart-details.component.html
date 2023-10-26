@@ -1,0 +1,110 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col bg-dark text-white">
+      <a class="navbar-brand">SPORTS STORE</a>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col mt-2">
+      <h2 class="text-center">Your Cart</h2>
+
+      <table class="table table-bordered table-striped p-2">
+        <thead>
+          <tr>
+            <th>Quantity</th>
+            <th>Product</th>
+            <th class="text-right">Price</th>
+            <th class="text-right">Subtotal</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngIf="cart.lines.length == 0">
+            <td colspan="4" class="text-center">Your cart is empty</td>
+          </tr>
+
+          <tr *ngFor="let line of cart.lines">
+            <td>{{ line.product.name }}</td>
+            <td class="text-right">
+              {{ line.product.price | currency : "INR" : "symbol" : "2.2-2" }}
+            </td>
+            <td class="text-right">
+              {{ line.lineTotal | currency : "INR" : "symbol" : "2.2-2" }}
+            </td>
+            <td class="text-center">
+              <button
+                class="btn btn-sm btn-danger"
+                (click)="cart.removeLine(line.product.id)"
+              >
+                Remove
+              </button>
+            </td>
+          </tr>
+
+          <!-- Row to display discount -->
+          <tr *ngIf="discountApplied">
+            <td colspan="3" class="text-right">Discount | 10%</td>
+            <td class="text-right">
+              -{{
+                cart.cartPrice * 0.1 | currency : "INR" : "symbol" : "2.2-2"
+              }}
+            </td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td colspan="3" class="text-right">Total:</td>
+            <td class="text-right">
+              {{
+                cart.cartPrice - (discountApplied ? cart.cartPrice * 0.1 : 0)
+                  | currency : "INR" : "symbol" : "2.2-2"
+              }}
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="text-center">
+        <button
+          class=" fa fa-check-square-o btn btn-secondary m-1"
+          routerLink="/checktemp"
+
+          [disabled]="cart.lines.length == 0"
+        >
+          Checkout
+        </button>
+
+        <button
+          class="btn btn-sm bg-dark text-white"
+          [disabled]="cart.itemCount == 0"
+          (click)="applyCoupon()"
+        >
+          <i class="fa fa-shopping-cart"></i>
+          Apply Coupon
+        </button>
+
+        <button
+          class="btn btn-sm bg-dark text-white"
+          [disabled]="!discountApplied"
+          (click)="removeCoupon()"
+        >
+          Remove Coupon
+        </button>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-success m-1 fa fa-paper-plane-o" routerLink="/store">
+          Continue Shopping
+        </button>
+      </div>
+    </div>
+    <p class="text-center text-success" *ngIf="discountMessage">
+      {{ discountMessage }}
+    </p>
+  </div>
+</div>

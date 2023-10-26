@@ -1,0 +1,43 @@
+/* Add custom styles to the cart summary */
+.cart-summary {
+
+  font-size: 20px;
+  margin-left: -10px;
+  background-color: #f1ea32 !important;
+}
+
+/* Style the badge for item count */
+.item-count-badge {
+  background-color: #007bff;
+  color: #fff; /* White text color */
+  font-size: 12px;
+  padding: 2px 5px;
+  border-radius: 50%;
+  font-size: 16px
+}
+
+/* Style the discounted cart price */
+.discounted-price {
+  color: #000000; /* Green text color */
+}
+
+/* Style the empty cart message */
+.empty-cart-message {
+  color: #dc3545; /* Red text color */
+}
+
+/* Style the "View Cart" button */
+.view-cart-button {
+  margin-top: 5px;
+  margin-right: 20px;
+  background-color:#115f23;
+  color: #fff;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+/* Style the cart icon */
+.cart-icon {
+  font-size: 24px;
+  margin-right: 5px;
+}

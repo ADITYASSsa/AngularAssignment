@@ -1,0 +1,23 @@
+<div class="col bg-light text-black cart-summary">
+  <small>
+    Your cart:
+
+    <span *ngIf="cart.itemCount > 0">
+      {{ cart.itemCount }} item(s)
+
+      <!-- Display the total cart value with or without discount -->
+      <ng-container *ngIf="applyDiscount; else withoutDiscount">
+        {{ (cart.cartPrice * 0.9) | currency : "USD" : "symbol" : "2.2-2" }}
+      </ng-container>
+      <ng-template #withoutDiscount>
+        {{ cart.cartPrice | currency : "USD" : "symbol" : "2.2-2" }}
+      </ng-template>
+    </span>
+
+    <span  *ngIf="cart.itemCount == 0"  class="empty-cart-message"> The cart is empty </span>
+  </small>
+  <button class="fa fa-shopping-cart view-cart-button" routerLink="/cart">View Cart</button>
+
+
+
+</div>
